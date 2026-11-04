@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.env*
+ssh.txt
+.demo-credentials.json
+.deploy
+supabase
+scripts
+*.tar
+*.tar.gz

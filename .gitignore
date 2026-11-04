@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env*
+!.env.example
+ssh.txt
+.demo-credentials.json
+.deploy/
+*.tar
+*.tar.gz
+supabase/.temp/
+supabase/.branches/
+.DS_Store
+*.tsbuildinfo
+__pycache__/

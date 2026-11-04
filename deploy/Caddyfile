@@ -1,0 +1,21 @@
+:8080 {
+    root * /srv
+    encode gzip zstd
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+        X-Frame-Options DENY
+    }
+    handle /healthz {
+        respond "ok" 200
+    }
+    handle /assets/* {
+        header Cache-Control "public, max-age=31536000, immutable"
+        file_server
+    }
+    handle {
+        try_files {path} /index.html
+        header Cache-Control "no-cache"
+        file_server
+    }
+}
